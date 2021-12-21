@@ -44,6 +44,12 @@ export const endringsloggSchema = (name, title) => ({
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Publisert',
+      name: 'publisert',
+      description: 'Sett denne til publisert når meldingen skal vises i saksbehandlingsløsningen.',
+      type: 'boolean',
+    },
+    {
       title: "Release date",
       name: "date",
       type: "date",
