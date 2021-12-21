@@ -51,7 +51,7 @@ import {
 import nbLocale from "date-fns/locale/nb";
 import { DateIntervalSlider } from "./Charts/DateIntervalSlider";
 
-const backendUrl = "http://localhost:8080";
+const backendUrl = "https://familie-endringslogg.dev.intern.nav.no";
 
 const CustomTab = withStyles({
   root: {

@@ -20,7 +20,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-const backendUrl = "http://localhost:8080";
+const backendUrl = "https://familie-endringslogg.dev.intern.nav.no";
 
 type App = {
   name: string;
@@ -133,7 +133,7 @@ export const EndringsloggPreview = () => {
           userId={"1"}
           appId={app._type}
           appName={app.name}
-          dataset={"testing"}
+          dataset={"production"}
           backendUrl={backendUrl}
         />
       )}
