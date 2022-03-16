@@ -16,6 +16,7 @@ export default createSchema({
   types: schemaTypes.concat([
     endringsloggSchema("EF", "Enslig forsørger"),
     endringsloggSchema("BAKS", "Barnetrygd"),
+    endringsloggSchema("K9_SAK", "Sykdom i familien"),
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
