@@ -20,7 +20,7 @@
     "@nivo/bar": "^0.73.1",
     "@nivo/calendar": "^0.73.0",
     "@nivo/core": "^0.73.0",
-    "@nivo/generators": "^0.73.0",
+    "@nivo/generators": "^0.83.0",
     "@nivo/line": "^0.73.0",
     "@nivo/pie": "^0.73.0",
     "@sanity/base": "^2.36.2",
