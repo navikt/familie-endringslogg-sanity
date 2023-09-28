@@ -1,6 +1,9 @@
 name: Backup Routine
 on:
   workflow_dispatch:
+  push:
+    branches-ignore:
+      - 'main'
   schedule:
     # Runs at 04:00 UTC on the 1st and 17th of every month
     - cron: "0 4 */16 * *"
