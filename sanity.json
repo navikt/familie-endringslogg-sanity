@@ -23,9 +23,7 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "endringslogg-statistics",
-    "endringslogg-preview"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {
