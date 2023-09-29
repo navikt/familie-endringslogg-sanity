@@ -6,7 +6,7 @@ Innholder er tilgjengelig på [familie-endringslogg.sanity.studio/production/des
 Appen deployes ved push til main via actions. Kan og deployes fra lokal maskin ved å kjøre `sanity deploy`
 
 ## Kjøring lokalt
-Kan kjøres lokalt med `npm start`
+Kan kjøres lokalt med `npm run dev`
 
 ## Henvendelser
 Ta kontakt i [#team-familie-dev](https://nav-it.slack.com/archives/CJN0STWB0)
