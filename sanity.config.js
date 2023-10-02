@@ -3,6 +3,7 @@ import {schemaTypes} from './schemas/schema'
 import {visionTool} from "@sanity/vision";
 import {NavLogo} from "./components/NavLogo";
 import {deskTool} from "sanity/desk";
+import {DATASET, PROJECT_ID} from "./constants";
 
 
 const auth = {
@@ -21,8 +22,8 @@ const auth = {
 export default defineConfig({
     name: 'production',
     title: 'Prod',
-    projectId: 'avzz8jwq',
-    dataset: 'production',
+    projectId: PROJECT_ID,
+    dataset: DATASET,
     plugins: [
         deskTool({}), visionTool(),
     ],
