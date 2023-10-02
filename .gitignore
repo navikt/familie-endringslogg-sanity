@@ -4,3 +4,4 @@ yarn.lock
 .idea
 idea
 .DS_Store
+.sanity/runtime

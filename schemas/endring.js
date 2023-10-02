@@ -1,9 +1,11 @@
-import conditionalFields from "./conditionalFields";
-
 const modalSlide = (num) => ({
   name: `modalSlide${num}`,
   title: `Modal Slide ${num}`,
   type: "object",
+  hidden: ({ parent }) => {
+    const antallModaler = parent?.numSlides;
+    return antallModaler === undefined || num > antallModaler
+  },
   fields: [
     {
       name: "slideHeader",
@@ -76,7 +78,6 @@ export const endringsloggSchema = (name, title) => ({
       title: "Se hvordan-modal",
       name: "modal",
       type: "object",
-      inputComponent: conditionalFields,
       fields: [
         {
           name: "numSlides",
@@ -89,9 +90,15 @@ export const endringsloggSchema = (name, title) => ({
           name:"forcedModal",
           value: "forcedModal",
           title: "Tvungen modal – dette tvinger modalen til å vises uten at brukeren klikker inn på endringsloggen",
-          type: "boolean"
+          type: "boolean",
+          hidden: ({parent}) => harValgtMindreEnn1Modal(parent),
         },
-        { name: "modalHeader", type: "string", title: "Modaloverskrift" },
+        {
+          name: "modalHeader",
+          type: "string",
+          title: "Modaloverskrift",
+          hidden: ({ parent }) => harValgtMindreEnn1Modal(parent),
+        },
         modalSlide(1),
         modalSlide(2),
         modalSlide(3),
@@ -106,3 +113,8 @@ export const endringsloggSchema = (name, title) => ({
     },
   ],
 });
+
+const harValgtMindreEnn1Modal = (numSlidesField) => {
+  const antallModaler = numSlidesField?.numSlides;
+  return antallModaler === undefined || antallModaler < 1
+}
