@@ -2,7 +2,7 @@ import {defineConfig} from 'sanity'
 import {schemaTypes} from './schemas/schema'
 import {visionTool} from "@sanity/vision";
 import {NavLogo} from "./components/NavLogo";
-import {deskTool} from "sanity/desk";
+import {structureTool} from "sanity/structure";
 import {DATASET, PROJECT_ID} from "./constants";
 
 
@@ -25,7 +25,7 @@ export default defineConfig({
     projectId: PROJECT_ID,
     dataset: DATASET,
     plugins: [
-        deskTool({}), visionTool(),
+        structureTool({}), visionTool(),
     ],
     tools: (prev) => {
         // 👇 Uses environment variables set by Vite in development mode
