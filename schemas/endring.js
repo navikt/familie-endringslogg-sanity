@@ -4,7 +4,7 @@ const modalSlide = (num) => ({
   type: "object",
   hidden: ({ parent }) => {
     const antallModaler = parent?.numSlides;
-    return antallModaler === undefined || num > antallModaler
+    return antallModaler === undefined || num > antallModaler;
   },
   fields: [
     {
@@ -46,16 +46,22 @@ export const endringsloggSchema = (name, title) => ({
       validation: (Rule) => Rule.required(),
     },
     {
-      title: 'Publisert',
-      name: 'publisert',
-      description: 'Sett denne til publisert når meldingen skal vises i prod. Meldingen vil vises i preprod også før bryteren avhukes',
-      type: 'boolean',
+      title: "Publisert",
+      name: "publisert",
+      description:
+        "Sett denne til publisert når meldingen skal vises i prod. Meldingen vil vises i preprod også før bryteren avhukes",
+      type: "boolean",
     },
     {
       title: "Release date",
       name: "date",
       type: "date",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      title: "Expiry date",
+      name: "expiryDate",
+      type: "date",
     },
     {
       name: "linkAttributes",
@@ -87,11 +93,12 @@ export const endringsloggSchema = (name, title) => ({
           validation: (Rule) => Rule.required().min(0).max(10),
         },
         {
-          name:"forcedModal",
+          name: "forcedModal",
           value: "forcedModal",
-          title: "Tvungen modal – dette tvinger modalen til å vises uten at brukeren klikker inn på endringsloggen",
+          title:
+            "Tvungen modal – dette tvinger modalen til å vises uten at brukeren klikker inn på endringsloggen",
           type: "boolean",
-          hidden: ({parent}) => harValgtMindreEnn1Modal(parent),
+          hidden: ({ parent }) => harValgtMindreEnn1Modal(parent),
         },
         {
           name: "modalHeader",
@@ -116,5 +123,5 @@ export const endringsloggSchema = (name, title) => ({
 
 const harValgtMindreEnn1Modal = (numSlidesField) => {
   const antallModaler = numSlidesField?.numSlides;
-  return antallModaler === undefined || antallModaler < 1
-}
+  return antallModaler === undefined || antallModaler < 1;
+};
