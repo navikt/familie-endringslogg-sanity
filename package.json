@@ -14,13 +14,11 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.71.2",
-    "@sanity/ui": "^2.11.0",
-    "@sanity/cli": "^3.71.2",
-    "sanity": "^3.71.2",
-    "prop-types": "^15.8.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "styled-components": "^6.1.14"
+    "@sanity/vision": "^4.1.1",
+    "@sanity/ui": "^3.0.2",
+    "@sanity/cli": "^4.1.1",
+    "sanity": "^4.1.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   }
 }
