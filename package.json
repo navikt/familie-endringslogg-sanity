@@ -14,10 +14,10 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^4.8.1",
+    "@sanity/vision": "^4.20.3",
     "@sanity/ui": "^3.0.2",
-    "@sanity/cli": "^4.8.1",
-    "sanity": "^4.8.1",
+    "@sanity/cli": "^4.20.3",
+    "sanity": "^4.20.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   }
