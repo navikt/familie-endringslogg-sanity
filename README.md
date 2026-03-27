@@ -1,3 +1,5 @@
+# Erstattet av: https://github.com/navikt/endringslogg
+
 # familie-endringslogg-sanity
 Sanity-oppsett for team families endringslogg.
 Innholder er tilgjengelig på [familie-endringslogg.sanity.studio/production/desk](https://familie-endringslogg.sanity.studio/production/desk)
